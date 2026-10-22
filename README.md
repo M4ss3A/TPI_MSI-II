@@ -48,15 +48,9 @@ java Main
 
 ## Datos de prueba
 
-- Estudiantes: 
+- Estudiantes: ID1- Ana Gonzales | ID2- Pablo Gomez | ID3- Lucia Martinez 
 
-ID1- Ana Gonzales
-ID2- Pablo Gomez 
-ID3- Lucia Martinez 
-
-- Responsables: 
-ID1- Secretaria Academica
-ID2- Area de Alumnos
+- Responsables:  ID1- Secretaria Academica | ID2- Area de Alumnos
 
 Los datos de prueba son ficticios. Las solicitudes se guardan solo en memoria: al cerrar el programa, se pierden.
 
