@@ -40,22 +40,23 @@ TPI_MetodologiaII/
 ```
 
 ## Ejecución
-Abrir esta carpeta en VS Code y ejecutar `Main.java` o utilizar la terminal dentro de la carpeta:
+Abrir esta carpeta en VS Code y ejecutar `Main.java`:
 
 ```bash
-javac Main.java Estudiante.java Responsable.java Solicitud.java
 java Main
 ```
 
 ## Datos de prueba
+
 - Estudiantes: 
+
 ID1- Ana Gonzales
 ID2- Pablo Gomez 
-ID3- Lucia Martineez 
+ID3- Lucia Martinez 
 
 - Responsables: 
-- ID1- Secretaria Academica
-- ID2- Area de Alumnos
+ID1- Secretaria Academica
+ID2- Area de Alumnos
 
 Los datos de prueba son ficticios. Las solicitudes se guardan solo en memoria: al cerrar el programa, se pierden.
 
