@@ -1,10 +1,10 @@
-# Sistema de Gestión de Solicitudes Académicas — Versión base
+# Sistema de Gestion de Solicitudes Académicas 
 Proyecto desarrollado en **Java** para el Trabajo Práctico Integrador de Metodología de Sistemas II, de la Tecnicatura Universitaria en Programación
 
-### 👥 Integrantes: 
-- Masseroni Ayelen
-- 
-- 
+### Integrantes: 
+- Gabriel Torres
+- Gabriela Machin
+-  Masseroni Ayelen
 
 ## Descripción
 El sistema permite gestionar solicitudes académicas realizadas por estudiantes, facilitando su registro, seguimiento y asignación a los responsables correspondientes.

@@ -1,3 +1,4 @@
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -26,6 +27,7 @@ public class Main {
             System.out.println("6. Salir");
             opcion = leerNumero("Opcion: ");
 
+            // Large class
             switch (opcion) {
                 case 1: registrarSolicitud(); break;
                 case 2: cambiarEstado(); break;
@@ -49,7 +51,7 @@ public class Main {
         }
     }
 
-    static void registrarSolicitud() {
+    static void registrarSolicitud() { //Long Method 
         System.out.println("\nEstudiantes disponibles:");
         for (Estudiante e : estudiantes) {
             System.out.println(e.id + " - " + e.nombre);
@@ -65,22 +67,22 @@ public class Main {
             System.out.println("No se encontro el estudiante.");
             return;
         }
-        System.out.print("Tipo (Certificado/Beca/Inscripcion): ");
+        System.out.print("Tipo (Certificado/Beca/Inscripcion): "); //Validaciones incompletas
         String tipo = teclado.nextLine();
-        System.out.print("Prioridad (Alta/Media/Baja): ");
+        System.out.print("Prioridad (Alta/Media/Baja): "); //Validaciones incompletas
         String prioridad = teclado.nextLine();
         System.out.print("Descripcion: ");
         String descripcion = teclado.nextLine();
-        Solicitud nueva = new Solicitud(proximoId, elegido, tipo, prioridad,
+        Solicitud nueva = new Solicitud(proximoId, elegido, tipo, prioridad, 
                 descripcion, "Pendiente", null);
         solicitudes.add(nueva);
         System.out.println("Solicitud registrada con ID " + proximoId);
         proximoId++;
     }
 
-    static void cambiarEstado() {
+    static void cambiarEstado() { 
         int id = leerNumero("ID de la solicitud: ");
-        Solicitud encontrada = null;
+        Solicitud encontrada = null; // Duplicated Code
         for (Solicitud s : solicitudes) {
             if (s.id == id) {
                 encontrada = s;
@@ -90,7 +92,7 @@ public class Main {
             System.out.println("No se encontro la solicitud.");
             return;
         }
-        System.out.print("Nuevo estado (Pendiente/En proceso/Resuelta): ");
+        System.out.print("Nuevo estado (Pendiente/En proceso/Resuelta): "); //Validaciones incompletas
         String nuevoEstado = teclado.nextLine();
         encontrada.estado = nuevoEstado;
         System.out.println("Estado actualizado.");
@@ -98,7 +100,7 @@ public class Main {
 
     static void asignarResponsable() {
         int id = leerNumero("ID de la solicitud: ");
-        Solicitud encontrada = null;
+        Solicitud encontrada = null; // Duplicated Code
         for (Solicitud s : solicitudes) {
             if (s.id == id) {
                 encontrada = s;
