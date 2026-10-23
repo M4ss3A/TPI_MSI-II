@@ -27,7 +27,7 @@ public class Main {
             System.out.println("6. Salir");
             opcion = leerNumero("Opcion: ");
 
-            // Large class
+            
             switch (opcion) {
                 case 1: registrarSolicitud(); break;
                 case 2: cambiarEstado(); break;
