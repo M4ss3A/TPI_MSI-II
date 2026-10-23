@@ -51,7 +51,7 @@ public class Main {
         }
     }
 
-    static void registrarSolicitud() { //Long Method 
+    static void registrarSolicitud() {  
         System.out.println("\nEstudiantes disponibles:");
         for (Estudiante e : estudiantes) {
             System.out.println(e.id + " - " + e.nombre);
@@ -67,9 +67,9 @@ public class Main {
             System.out.println("No se encontro el estudiante.");
             return;
         }
-        System.out.print("Tipo (Certificado/Beca/Inscripcion): "); //Validaciones incompletas
+        System.out.print("Tipo (Certificado/Beca/Inscripcion): "); 
         String tipo = teclado.nextLine();
-        System.out.print("Prioridad (Alta/Media/Baja): "); //Validaciones incompletas
+        System.out.print("Prioridad (Alta/Media/Baja): "); 
         String prioridad = teclado.nextLine();
         System.out.print("Descripcion: ");
         String descripcion = teclado.nextLine();
@@ -82,7 +82,7 @@ public class Main {
 
     static void cambiarEstado() { 
         int id = leerNumero("ID de la solicitud: ");
-        Solicitud encontrada = null; // Duplicated Code
+        Solicitud encontrada = null; 
         for (Solicitud s : solicitudes) {
             if (s.id == id) {
                 encontrada = s;
@@ -92,7 +92,7 @@ public class Main {
             System.out.println("No se encontro la solicitud.");
             return;
         }
-        System.out.print("Nuevo estado (Pendiente/En proceso/Resuelta): "); //Validaciones incompletas
+        System.out.print("Nuevo estado (Pendiente/En proceso/Resuelta): "); 
         String nuevoEstado = teclado.nextLine();
         encontrada.estado = nuevoEstado;
         System.out.println("Estado actualizado.");
@@ -100,7 +100,7 @@ public class Main {
 
     static void asignarResponsable() {
         int id = leerNumero("ID de la solicitud: ");
-        Solicitud encontrada = null; // Duplicated Code
+        Solicitud encontrada = null; 
         for (Solicitud s : solicitudes) {
             if (s.id == id) {
                 encontrada = s;

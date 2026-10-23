@@ -1,4 +1,4 @@
-public class Estudiante { //Falta de encapsulamiento
+public class Estudiante { 
     public int id;
     public String nombre;
 

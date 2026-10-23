@@ -1,4 +1,4 @@
-public class Responsable { //Falta de encapsulamiento
+public class Responsable { 
     public int id;
     public String nombre;
 

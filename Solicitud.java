@@ -1,9 +1,9 @@
-public class Solicitud { //Falta de encapsulamiento
+public class Solicitud { 
     public int id;
     public Estudiante estudiante;
-    public String tipo; //Primitive Obsession
-    public String prioridad; //Primitive Obsession
-    public String descripcion; //Primitive Obsession
+    public String tipo; 
+    public String prioridad; 
+    public String descripcion; 
     public String estado;
     public Responsable responsable;
 
