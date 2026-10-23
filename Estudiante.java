@@ -1,9 +1,17 @@
-public class Estudiante { 
-    public int id;
-    public String nombre;
+public class Estudiante {
+    private final int id;
+    private final String nombre;
 
     public Estudiante(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 }
