@@ -30,20 +30,21 @@ A partir del sistema base se busca:
 
 ## Estructura del proyecto
 ```text
-TPI_MetodologiaII/
-│
-├── Main.java -> Menú principal y operaciones del sistema.
-├── Estudiante.java -> Información de los estudiantes.
-├── Responsable.java -> Responsables de las solicitudes.
-├── Solicitud.java -> Datos de las solicitudes académicas.
-└── README.md
+src/
+└── tpi/solicitudes/
+    ├── Main.java
+    ├── dominio/          # Entidades, enums y reglas del dominio
+    ├── aplicacion/       # Casos de uso e interfaces
+    ├── infraestructura/ # Implementaciones en memoria
+    └── presentacion/     # Interfaz y formato de consola
 ```
 
 ## Ejecución
-Abrir esta carpeta en VS Code y ejecutar `Main.java`:
+Desde la carpeta del proyecto, compilar y ejecutar:
 
 ```bash
-java Main
+javac -d out -sourcepath src src/tpi/solicitudes/Main.java
+java -cp out tpi.solicitudes.Main
 ```
 
 ## Datos de prueba
@@ -53,4 +54,3 @@ java Main
 - Responsables:  ID1- Secretaria Academica | ID2- Area de Alumnos
 
 Los datos de prueba son ficticios. Las solicitudes se guardan solo en memoria: al cerrar el programa, se pierden.
-

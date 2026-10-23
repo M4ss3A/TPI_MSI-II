@@ -1,10 +1,12 @@
-public class Solicitud {
+package tpi.solicitudes.dominio;
+
+public class Solicitud implements Identificable {
     private final int id;
     private final Estudiante estudiante;
-    private final String tipo;
-    private final String prioridad;
+    private final TipoSolicitud tipo;
+    private final Prioridad prioridad;
     private final String descripcion;
-    private String estado;
+    private Estado estado;
     private Responsable responsable;
 
     // Una solicitud nueva siempre nace "Pendiente" y sin responsable:
@@ -15,10 +17,11 @@ public class Solicitud {
         this.tipo = datos.getTipo();
         this.prioridad = datos.getPrioridad();
         this.descripcion = datos.getDescripcion();
-        this.estado = "Pendiente";
+        this.estado = Estado.PENDIENTE;
         this.responsable = null;
     }
 
+    @Override
     public int getId() {
         return id;
     }
@@ -27,11 +30,11 @@ public class Solicitud {
         return estudiante;
     }
 
-    public String getTipo() {
+    public TipoSolicitud getTipo() {
         return tipo;
     }
 
-    public String getPrioridad() {
+    public Prioridad getPrioridad() {
         return prioridad;
     }
 
@@ -39,7 +42,7 @@ public class Solicitud {
         return descripcion;
     }
 
-    public String getEstado() {
+    public Estado getEstado() {
         return estado;
     }
 
@@ -49,7 +52,7 @@ public class Solicitud {
 
     // ---------- Comportamiento movido desde Main (Move Method) ----------
 
-    public void cambiarEstado(String nuevoEstado) {
+    public void cambiarEstado(Estado nuevoEstado) {
         this.estado = nuevoEstado;
     }
 
@@ -61,11 +64,11 @@ public class Solicitud {
         return responsable == null ? "Sin asignar" : responsable.getNombre();
     }
 
-    public boolean estaEn(String estadoBuscado) {
-        return estado.equalsIgnoreCase(estadoBuscado);
+    public boolean estaEn(Estado estadoBuscado) {
+        return estado == estadoBuscado;
     }
 
     public boolean coincideCon(String filtro) {
-        return tipo.equalsIgnoreCase(filtro) || estaEn(filtro);
+        return tipo.coincideCon(filtro) || estado.coincideCon(filtro);
     }
 }
