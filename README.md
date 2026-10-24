@@ -30,20 +30,32 @@ A partir del sistema base se busca:
 
 ## Estructura del proyecto
 ```text
-src/
-└── tpi/solicitudes/
-    ├── Main.java
-    ├── dominio/          # Entidades, enums y reglas del dominio
-    ├── aplicacion/       # Casos de uso e interfaces
-    ├── infraestructura/ # Implementaciones en memoria
-    └── presentacion/     # Interfaz y formato de consola
+TPI_MSI-II/
+├── src/tpi/solicitudes/
+│   ├── Main.java                  -> Punto de entrada: arma y conecta los objetos.
+│   ├── dominio/                   -> Solicitud, DatosSolicitud, Estudiante, Responsable,
+│   │                                 Estado, TipoSolicitud, Prioridad, ConEtiqueta,
+│   │                                 Identificable, SolicitudException
+│   ├── aplicacion/                -> ServicioSolicitudes, Catalogo, RepositorioSolicitudes
+│   ├── infraestructura/           -> CatalogoMemoria, RepositorioSolicitudesMemoria
+│   └── presentacion/              -> ConsolaSolicitudes, FormateadorSolicitudes
+└── docs/                          -> Diagnostico, SOLID/Clean Code y refactorings.
 ```
 
 ## Ejecución
-Desde la carpeta del proyecto, compilar y ejecutar:
+Con VS Code: abrir esta carpeta y ejecutar `src/tpi/solicitudes/Main.java`.
+
+Por consola, desde la raíz del repositorio (PowerShell):
+
+```powershell
+javac -d out (Get-ChildItem -Recurse src -Filter *.java).FullName
+java -cp out tpi.solicitudes.Main
+```
+
+En Linux o macOS:
 
 ```bash
-javac -d out -sourcepath src src/tpi/solicitudes/Main.java
+javac -d out $(find src -name "*.java")
 java -cp out tpi.solicitudes.Main
 ```
 
@@ -54,3 +66,4 @@ java -cp out tpi.solicitudes.Main
 - Responsables:  ID1- Secretaria Academica | ID2- Area de Alumnos
 
 Los datos de prueba son ficticios. Las solicitudes se guardan solo en memoria: al cerrar el programa, se pierden.
+
