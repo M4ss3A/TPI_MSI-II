@@ -11,7 +11,7 @@ El detalle técnico de cada transformación (antes/después de código) está en
 | `Main` | Menú, lectura del teclado, búsqueda de datos, reglas de negocio, formato de salida, almacenamiento (listas estáticas) y conteos: **6 razones para cambiar**. | `Main` solo arma y conecta los objetos. |
 | Responsabilidades | Todas en una clase de 168 líneas. | `ConsolaSolicitudes` y `FormateadorSolicitudes` (paquete `presentacion`), `ServicioSolicitudes` (`aplicacion`), `RepositorioSolicitudesMemoria` y `CatalogoMemoria` (`infraestructura`), `Solicitud` y el resto del negocio (`dominio`). |
 
-Smells resueltos: 1 (Large Class), 8 (variables estáticas compartidas). Refactoring: *Extract Class* y *Move Class*.
+Smells resueltos: 1 (Large Class), 8 (variables estáticas compartidas). Refactoring: *Extract Class* (con organización en paquetes).
 
 ### OCP - Abierto/cerrado
 - **Estados:** el reporte recorre `Estado.values()` y el conteo se arma con `EnumMap`. Agregar un estado nuevo (ej. `RECHAZADA`) es **agregar una línea al enum**; el reporte, la validación del menú y el texto "Nuevo estado (…)" se actualizan solos. Antes había que editar `mostrarReporte()`, el texto del prompt y los `equalsIgnoreCase` de a uno.
@@ -36,11 +36,11 @@ El sistema original no tiene herencia, así que **LSP no aplica de forma natural
 | **Encapsulamiento** | Atributos `public` modificables desde cualquier clase (`encontrada.estado = nuevoEstado`). | Atributos `private`, `final` cuando no cambian; el estado solo cambia mediante `cambiarEstado()` y el responsable mediante `asignarResponsable()`. | 6 |
 | **Funciones pequeñas** | `registrarSolicitud()` hacía listado, búsqueda, lectura de 3 datos, creación, guardado e impresión. | Cada método hace una cosa: `registrarSolicitud()` (flujo), `leerOpcion()`, `leerTextoNoVacio()`, `servicio.registrar()`. | 5 |
 | **No repetirse (DRY)** | Búsqueda por ID copiada 4 veces; el ternario `Sin asignar` copiado 2 veces. | `buscarPorId()` único en `CatalogoMemoria`; `Solicitud.nombreResponsable()`. | 2 |
-| **Nombres que revelan intención** | `Method` importado sin uso, `s`, `e`, `r`. | Se elimina el import muerto; nombres como `coincidencias`, `nuevoEstado`, `idResponsable`; constante `OPCION_SALIR` en lugar del número `6` repetido. | - |
+| **Nombres que revelan intención** | `Method` importado sin uso, `s`, `e`, `r`. | Se elimina el import muerto; nombres como `solicitud`, `coincidencias`, `nuevoEstado`, `idResponsable`; constante `OPCION_SALIR` en lugar del número `6` repetido. | - |
 | **Menos parámetros** | Constructor de `Solicitud` con 7 parámetros. | `Solicitud(int id, DatosSolicitud datos)`: 2 parámetros. | 4 |
 | **Manejo de errores** | Se devolvía `null` y cada método repetía `if (x == null) { print; return; }`. | `Optional` + `SolicitudException`; los errores se muestran en **un solo punto** (`ConsolaSolicitudes.ejecutarOpcion`). | 2 |
 | **Validación de datos** | Aceptaba cualquier texto como tipo, prioridad, estado y descripción vacía. | La consola valida tipo, prioridad y estado antes de llamar al servicio, y vuelve a preguntar ante una entrada inválida. También rechaza descripciones vacías; `DatosSolicitud` rechaza datos incompletos. | 7 |
-| **Baja cohesión / alto acoplamiento** | `Main` accedía a los campos internos de `Solicitud` (`s.responsable.nombre`) - *Feature Envy*. | `Solicitud` expone comportamiento (`coincideCon`, `estaEn`, `nombreResponsable`); la consola solo conoce al servicio. | 1 |
+| **Baja cohesión / alto acoplamiento** | `Main` accedía a los campos internos de `Solicitud` (`s.responsable.nombre`) - *Feature Envy*. | `Solicitud` expone comportamiento (`coincideCon`, `estaEn`, `nombreResponsable`); la consola no accede a los campos de `Solicitud` ni al almacenamiento: usa el servicio. | 1 |
 
 ## 3. Cambios de comportamiento intencionales
 

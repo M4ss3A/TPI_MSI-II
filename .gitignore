@@ -1,0 +1,8 @@
+# Salida de compilacion
+out/
+*.class
+
+# Configuracion de editores
+.vscode/
+.idea/
+*.iml

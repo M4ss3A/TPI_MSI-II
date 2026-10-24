@@ -5,24 +5,24 @@ import tpi.solicitudes.dominio.Solicitud;
 
 import java.util.Map;
 
-/** Arma los textos que se muestran por pantalla (presentacion separada de la logica). */
+/** Arma los textos que se muestran por pantalla (presentación separada de la lógica). */
 public class FormateadorSolicitudes {
 
-    /** Linea corta usada en los resultados de busqueda. */
-    public String lineaBusqueda(Solicitud s) {
-        return "ID: " + s.getId() + " | Estudiante: " + s.getEstudiante().getNombre()
-                + " | Tipo: " + s.getTipo().etiqueta()
-                + " | Estado: " + s.getEstado().etiqueta()
-                + " | Responsable: " + s.nombreResponsable();
+    /** Linea corta usada en los resultados de búsqueda. */
+    public String lineaBusqueda(Solicitud solicitud) {
+        return "ID: " + solicitud.getId() + " | Estudiante: " + solicitud.getEstudiante().getNombre()
+                + " | Tipo: " + solicitud.getTipo().etiqueta()
+                + " | Estado: " + solicitud.getEstado().etiqueta()
+                + " | Responsable: " + solicitud.nombreResponsable();
     }
 
     /** Linea completa usada en el reporte (incluye prioridad). */
-    public String lineaReporte(Solicitud s) {
-        return "ID: " + s.getId() + " | Estudiante: " + s.getEstudiante().getNombre()
-                + " | Tipo: " + s.getTipo().etiqueta()
-                + " | Prioridad: " + s.getPrioridad().etiqueta()
-                + " | Estado: " + s.getEstado().etiqueta()
-                + " | Responsable: " + s.nombreResponsable();
+    public String lineaReporte(Solicitud solicitud) {
+        return "ID: " + solicitud.getId() + " | Estudiante: " + solicitud.getEstudiante().getNombre()
+                + " | Tipo: " + solicitud.getTipo().etiqueta()
+                + " | Prioridad: " + solicitud.getPrioridad().etiqueta()
+                + " | Estado: " + solicitud.getEstado().etiqueta()
+                + " | Responsable: " + solicitud.nombreResponsable();
     }
 
     /** Ej: "Pendientes: 1 | En proceso: 0 | Resueltas: 2". Incluye cualquier Estado nuevo. */
