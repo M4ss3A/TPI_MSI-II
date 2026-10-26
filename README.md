@@ -30,20 +30,33 @@ A partir del sistema base se busca:
 
 ## Estructura del proyecto
 ```text
-TPI_MetodologiaII/
-│
-├── Main.java -> Menú principal y operaciones del sistema.
-├── Estudiante.java -> Información de los estudiantes.
-├── Responsable.java -> Responsables de las solicitudes.
-├── Solicitud.java -> Datos de las solicitudes académicas.
-└── README.md
+TPI_MSI-II/
+├── src/tpi/solicitudes/
+│   ├── Main.java                  -> Punto de entrada: arma y conecta los objetos.
+│   ├── dominio/                   -> Solicitud, DatosSolicitud, Estudiante, Responsable,
+│   │                                 Estado, TipoSolicitud, Prioridad, ConEtiqueta,
+│   │                                 Identificable, SolicitudException
+│   ├── aplicacion/                -> ServicioSolicitudes, Catalogo, RepositorioSolicitudes
+│   ├── infraestructura/           -> CatalogoMemoria, RepositorioSolicitudesMemoria
+│   └── presentacion/              -> ConsolaSolicitudes, FormateadorSolicitudes
+└── docs/                          -> Diagnostico, SOLID/Clean Code y refactorings.
 ```
 
 ## Ejecución
-Abrir esta carpeta en VS Code y ejecutar `Main.java`:
+Con VS Code: abrir esta carpeta y ejecutar `src/tpi/solicitudes/Main.java`.
+
+Por consola, desde la raíz del repositorio (PowerShell):
+
+```powershell
+javac -d out (Get-ChildItem -Recurse src -Filter *.java).FullName
+java -cp out tpi.solicitudes.Main
+```
+
+En Linux o macOS:
 
 ```bash
-java Main
+javac -d out $(find src -name "*.java")
+java -cp out tpi.solicitudes.Main
 ```
 
 ## Datos de prueba
