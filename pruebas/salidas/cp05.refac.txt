@@ -1,0 +1,45 @@
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: 
+Estudiantes disponibles:
+1 - Ana Gonzales
+2 - Pablo Gomez
+3 - Lucia Martinez
+ID del estudiante: Tipo (Certificado/Beca/Inscripcion): Prioridad (Alta/Media/Baja): Descripcion: Solicitud registrada con ID 1
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: 
+=== REPORTE DE SOLICITUDES ===
+ID: 1 | Estudiante: Ana Gonzales | Tipo: Certificado | Prioridad: Alta | Estado: Pendiente | Responsable: Sin asignar
+Total: 1
+Pendientes: 1 | En proceso: 0 | Resueltas: 0
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: Escribi un tipo o estado para filtrar: ID: 1 | Estudiante: Ana Gonzales | Tipo: Certificado | Estado: Pendiente | Responsable: Sin asignar
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: Hasta luego.

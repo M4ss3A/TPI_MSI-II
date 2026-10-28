@@ -1,0 +1,14 @@
+1
+1
+Foo
+Certificado
+Urgente
+Alta
+
+desc valida
+2
+1
+Cerrada
+Resuelta
+5
+6

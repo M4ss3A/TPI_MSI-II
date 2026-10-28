@@ -1,0 +1,9 @@
+1
+1
+certificado
+alta
+minusculas
+5
+4
+CERTIFICADO
+6

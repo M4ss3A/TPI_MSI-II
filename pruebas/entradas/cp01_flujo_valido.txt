@@ -1,0 +1,35 @@
+1
+1
+Certificado
+Alta
+Pedido de certificado regular
+1
+2
+Beca
+Media
+Consulta por beca
+1
+3
+Inscripcion
+Baja
+Inscripcion a materia
+2
+1
+En proceso
+2
+2
+Resuelta
+3
+1
+2
+3
+2
+1
+4
+Certificado
+4
+En proceso
+4
+Resuelta
+5
+6

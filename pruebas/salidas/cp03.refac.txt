@@ -1,0 +1,30 @@
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: 
+=== REPORTE DE SOLICITUDES ===
+Total: 0
+Pendientes: 0 | En proceso: 0 | Resueltas: 0
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: Escribi un tipo o estado para filtrar: No hay coincidencias.
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: Hasta luego.

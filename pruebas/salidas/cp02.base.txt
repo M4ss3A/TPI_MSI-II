@@ -1,0 +1,120 @@
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: 
+Estudiantes disponibles:
+1 - Ana Gonzales
+2 - Pablo Gomez
+3 - Lucia Martinez
+ID del estudiante: No se encontro el estudiante.
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: ID de la solicitud: No se encontro la solicitud.
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: ID de la solicitud: No se encontro la solicitud.
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: Opcion invalida.
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: Ingresa un numero valido.
+Opcion: 
+=== REPORTE DE SOLICITUDES ===
+Total: 0
+Pendientes: 0 | En proceso: 0 | Resueltas: 0
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: Escribi un tipo o estado para filtrar: No hay coincidencias.
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: 
+Estudiantes disponibles:
+1 - Ana Gonzales
+2 - Pablo Gomez
+3 - Lucia Martinez
+ID del estudiante: Tipo (Certificado/Beca/Inscripcion): Prioridad (Alta/Media/Baja): Descripcion: Solicitud registrada con ID 1
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: ID de la solicitud: Responsables disponibles:
+1 - Secretaria Academica
+2 - Area de Alumnos
+ID del responsable: No se encontro el responsable.
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: Escribi un tipo o estado para filtrar: No hay coincidencias.
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: 
+=== REPORTE DE SOLICITUDES ===
+ID: 1 | Estudiante: Ana Gonzales | Tipo: Beca | Prioridad: Alta | Estado: Pendiente | Responsable: Sin asignar
+Total: 1
+Pendientes: 1 | En proceso: 0 | Resueltas: 0
+
+=== GESTION DE SOLICITUDES ACADEMICAS ===
+1. Registrar solicitud
+2. Cambiar estado
+3. Asignar responsable
+4. Buscar solicitudes por tipo o estado
+5. Ver reporte
+6. Salir
+Opcion: Hasta luego.
