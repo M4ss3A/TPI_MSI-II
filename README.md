@@ -39,6 +39,7 @@ TPI_MSI-II/
 │   ├── aplicacion/                -> ServicioSolicitudes, Catalogo, RepositorioSolicitudes
 │   ├── infraestructura/           -> CatalogoMemoria, RepositorioSolicitudesMemoria
 │   └── presentacion/              -> ConsolaSolicitudes, FormateadorSolicitudes
+├── pruebas/                       -> Pruebas unitarias, casos antes/después y evidencias.
 └── docs/                          -> Diagnostico, SOLID/Clean Code y refactorings.
 ```
 
@@ -67,3 +68,29 @@ java -cp out tpi.solicitudes.Main
 
 Los datos de prueba son ficticios. Las solicitudes se guardan solo en memoria: al cerrar el programa, se pierden.
 
+## Tecnologías
+- Java 11 o superior (probado con JDK 21)
+- Visual Studio Code
+- Git y GitHub para el control de versiones
+
+## Pruebas
+La carpeta `pruebas/` contiene la verificación del comportamiento (etapa 6):
+
+- `PruebasServicio.java`: 17 pruebas unitarias del servicio, sin consola.
+- `ComparadorVersiones.java`: ejecuta la versión base (tag `estado-inicial`) y la refactorizada con las mismas entradas y compara las salidas.
+- `entradas/` y `salidas/`: archivos de entrada simulados y salidas obtenidas de cada versión.
+
+```powershell
+javac -sourcepath src -d out src/tpi/solicitudes/Main.java
+javac -cp out -d out pruebas/PruebasServicio.java
+java -cp out PruebasServicio
+
+git clone https://github.com/M4ss3A/TPI_MSI-II.git ../base
+cd ../base
+git checkout estado-inicial
+javac -sourcepath . -d out Main.java
+cd ../TPI_MSI-II
+java pruebas/ComparadorVersiones.java ../base/out out
+```
+
+Detalle en `docs/etapa6-pruebas.md`.
