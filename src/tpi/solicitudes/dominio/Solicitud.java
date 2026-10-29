@@ -64,10 +64,6 @@ public class Solicitud implements Identificable {
         return responsable == null ? "Sin asignar" : responsable.getNombre();
     }
 
-    public boolean estaEn(Estado estadoBuscado) {
-        return estado == estadoBuscado;
-    }
-
     public boolean coincideCon(String filtro) {
         return tipo.coincideCon(filtro) || estado.coincideCon(filtro);
     }

@@ -12,12 +12,18 @@ import tpi.solicitudes.dominio.SolicitudException;
 import tpi.solicitudes.dominio.TipoSolicitud;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.Scanner;
 
 /** Interfaz de usuario por consola: menu, lectura de datos y muestra de resultados. */
 public class ConsolaSolicitudes {
 
+    private static final int OPCION_REGISTRAR = 1;
+    private static final int OPCION_CAMBIAR_ESTADO = 2;
+    private static final int OPCION_ASIGNAR_RESPONSABLE = 3;
+    private static final int OPCION_BUSCAR = 4;
+    private static final int OPCION_REPORTE = 5;
     private static final int OPCION_SALIR = 6;
 
     private final ServicioSolicitudes servicio;
@@ -32,11 +38,16 @@ public class ConsolaSolicitudes {
     }
 
     public void ejecutar() {
-        int opcion = 0;
-        while (opcion != OPCION_SALIR) {
-            mostrarMenu();
-            opcion = leerNumero("Opcion: ");
-            ejecutarOpcion(opcion);
+        try {
+            int opcion = 0;
+            while (opcion != OPCION_SALIR) {
+                mostrarMenu();
+                opcion = leerNumero("Opcion: ");
+                ejecutarOpcion(opcion);
+            }
+        } catch (NoSuchElementException finDeEntrada) {
+            // La entrada se cerro (Ctrl+D / Ctrl+Z o archivo sin opcion Salir): cerrar sin stack trace.
+            System.out.println("\nEntrada finalizada. Hasta luego.");
         }
     }
 
@@ -63,11 +74,11 @@ public class ConsolaSolicitudes {
 
     private void despachar(int opcion) {
         switch (opcion) {
-            case 1: registrarSolicitud(); break;
-            case 2: cambiarEstado(); break;
-            case 3: asignarResponsable(); break;
-            case 4: buscarSolicitudes(); break;
-            case 5: mostrarReporte(); break;
+            case OPCION_REGISTRAR: registrarSolicitud(); break;
+            case OPCION_CAMBIAR_ESTADO: cambiarEstado(); break;
+            case OPCION_ASIGNAR_RESPONSABLE: asignarResponsable(); break;
+            case OPCION_BUSCAR: buscarSolicitudes(); break;
+            case OPCION_REPORTE: mostrarReporte(); break;
             case OPCION_SALIR: System.out.println("Hasta luego."); break;
             default: System.out.println("Opcion invalida.");
         }

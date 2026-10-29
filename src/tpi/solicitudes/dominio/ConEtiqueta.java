@@ -11,7 +11,7 @@ public interface ConEtiqueta {
     String etiqueta();
 
     default boolean coincideCon(String texto) {
-        return etiqueta().equalsIgnoreCase(texto);
+        return texto != null && etiqueta().equalsIgnoreCase(texto.trim());
     }
 
     /** Busca el valor del enum cuya etiqueta coincide (sin distinguir mayusculas). */
